@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "Grades";
+}
+
+<h2>Grades</h2>
+<form action="Index" method="post">
+    Enter your grades for tests:
+    <br />
+    Test 1: <input type="number" name="test1" id="test1" min="0" max="100" />
+    <br />
+    Test 2: <input type="number" name="test2" id="test2" min="0" max="100" />
+    <br />
+    Test 3: <input type="number" name="test3" id="test3" min="0" max="100" />
+    <br /><br />
+    <input type="submit" value="Calculate" />
+</form>
+<br />
+<!--Attempts for the bonus
+    <button name="add" id="add">Add</button>
+    <button name="remove" id="remove">Remove</button>-->
+<br />
+
+@ViewBag.average
+
+@if(@ViewBag.letter == 'A' || @ViewBag.letter == 'B'){
+<font color="green">@ViewBag.letter</font>
+}
+@if(@ViewBag.letter == 'C'){
+<font color="yellow">@ViewBag.letter</font>
+}
+@if(@ViewBag.letter == 'D' || @ViewBag.letter == 'E'){
+<font color="red">@ViewBag.letter</font>
+}

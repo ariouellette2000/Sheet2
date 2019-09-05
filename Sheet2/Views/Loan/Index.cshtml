@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Loan";
+}
+
+<h2>Loan</h2>
+<form action="/Loan/Index" method="post">
+    Number of years: <input type="number" name="years" id="years" min="0"/>
+    <br />
+    Amount of investment: <input type="number" name="investment" id="investment" min="0"/>
+    <br />
+    Interest rate: <input type="number" name="rate" id="rate" min="0"/>
+    <br /><br />
+    <input type="submit" value="Submit" />
+</form>
+<br />
+
+@if (ViewData["totalAmount"] != null)
+{
+<p>Given @ViewData["years"] years, an investment of $@ViewData["investment"], and an annual rate of @ViewData["rate"]%,
+    you will have <bold>@ViewData["totalAmount"]</bold>.</p>
+}
+
