@@ -5,11 +5,11 @@
 
 <h2>Loan</h2>
 <form action="/Loan/Index" method="post">
-    Number of years: <input type="number" name="years" id="years" min="0"/>
+    Number of years: <input type="number" name="years" id="years" min="0" value="@ViewData["years"]"/>
     <br />
-    Amount of investment: <input type="number" name="investment" id="investment" min="0"/>
+    Amount of investment: <input type="number" name="investment" id="investment" min="0" value="@ViewData["investment"]"/>
     <br />
-    Interest rate: <input type="number" name="rate" id="rate" min="0"/>
+    Interest rate: <input type="number" name="rate" id="rate" min="0" value="@ViewData["rate"]"/>
     <br /><br />
     <input type="submit" value="Submit" />
 </form>
